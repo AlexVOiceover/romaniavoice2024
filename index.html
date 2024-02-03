@@ -29,7 +29,10 @@
 
 		<title>Adriana Popescu - Romanian Voiceover</title>
 		<link rel="stylesheet" href="styles/styles.css" />
-        <meta name="description" content="Adriana Popescu is a professional voice actress providing high-quality voice-over services for corporate, commercial, and creative projects. Listen to voice samples and view a list of happy clients. Contact Adriana for voice-over work that brings your script to life.">
+		<meta
+			name="description"
+			content="Adriana Popescu is a professional voice actress providing high-quality voice-over services for corporate, commercial, and creative projects. Listen to voice samples and view a list of happy clients. Contact Adriana for voice-over work that brings your script to life."
+		/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link
@@ -42,16 +45,16 @@
 	<body>
 		<header>
 			<nav>
-				<div class="logo">
-					<!-- Your logo will go here -->
-					<a href="#">Adriana Popescu</a>
-				</div>
 				<div class="nav-links">
 					<!-- Navigation Links -->
 					<a href="#voice-samples">Voice Samples</a>
 					<a href="#clients">Clients</a>
 					<a href="#equipment">Equipment</a>
 					<a href="#contact">Contact</a>
+				</div>
+				<div class="logo">
+					<!-- Your logo will go here -->
+					<h1><a href="#">Adriana Popescu</a></h1>
 				</div>
 			</nav>
 		</header>
@@ -61,26 +64,28 @@
 		<section id="voice-samples">
 			<h2>VOICE SAMPLES</h2>
 			<!-- Replace these with your actual audio files -->
-			<div class="sample">
-				<h3>REEL</h3>
-				<audio controls>
-					<source src="./audios/Reel.mp3" type="audio/mpeg" />
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-			<div class="sample">
-				<h3>CORPORATE</h3>
-				<audio controls>
-					<source src="./audios/Corporate.mp3" type="audio/mpeg" />
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-			<div class="sample">
-				<h3>ELEARNING</h3>
-				<audio controls>
-					<source src="./audios/Elearning.mp3" type="audio/mpeg" />
-					Your browser does not support the audio element.
-				</audio>
+			<div class="samplesBox">
+				<div class="sample">
+					<h3>REEL</h3>
+					<audio controls>
+						<source src="./audios/Reel.mp3" type="audio/mpeg" />
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+				<div class="sample">
+					<h3>CORPORATE</h3>
+					<audio controls>
+						<source src="./audios/Corporate.mp3" type="audio/mpeg" />
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+				<div class="sample">
+					<h3>ELEARNING</h3>
+					<audio controls>
+						<source src="./audios/Elearning.mp3" type="audio/mpeg" />
+						Your browser does not support the audio element.
+					</audio>
+				</div>
 			</div>
 			<!-- Add more samples as needed -->
 		</section>
@@ -89,26 +94,74 @@
 		<section id="clients">
 			<h2>HAPPY CLIENTS</h2>
 			<div class="client-logos">
-				<img src="/images/clients/3M.png" alt="3M" />
-				<img src="/images/clients/Amazon.png" alt="Amazon" />
-				<img src="/images/clients/Amex.png" alt="American Express" />
-				<img src="/images/clients/ASICS.png" alt="ASICS" />
-				<img src="/images/clients/BBC.png" alt="BBC" />
-				<img src="/images/clients/Bosch.png" alt="Bosch" />
-				<img src="/images/clients/Calvin.png" alt="Calvin Klein" />
-				<img src="/images/clients/Disney-Junior.png" alt="Disney Junior" />
-				<img src="/images/clients/HM.png" alt="H&M" />
-				<img src="/images/clients/Huawei.png" alt="Huawei" />
-				<img src="/images/clients/LEGO.png" alt="LEGO" />
-				<img src="/images/clients/Lilly.png" alt="Lilly" />
-				<img src="/images/clients/microsoft.png" alt="Microsoft" />
-				<img src="/images/clients/Nestea.png" alt="Nestea" />
-				<img src="/images/clients/Netflix.png" alt="Netflix" />
-				<img src="/images/clients/Pandora.jpg" alt="Pandora" />
-				<img src="/images/clients/Reebok.png" alt="Reebok" />
-				<img src="/images/clients/Shiseido.png" alt="Shiseido" />
-				<img src="/images/clients/Spotify.png" alt="Spotify" />
-				<img src="/images/clients/Sony.png" alt="Sony" />
+				<img class="client-image" src="/images/clients/3M.png" alt="3M" />
+				<img
+					class="client-image"
+					src="/images/clients/Amazon.png"
+					alt="Amazon"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Amex.png"
+					alt="American Express"
+				/>
+				<img class="client-image" src="/images/clients/ASICS.png" alt="ASICS" />
+				<img class="client-image" src="/images/clients/BBC.png" alt="BBC" />
+				<img class="client-image" src="/images/clients/Bosch.png" alt="Bosch" />
+				<img
+					class="client-image"
+					src="/images/clients/Calvin.png"
+					alt="Calvin Klein"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Disney-Junior.png"
+					alt="Disney Junior"
+				/>
+				<img class="client-image" src="/images/clients/HM.png" alt="H&M" />
+				<img
+					class="client-image"
+					src="/images/clients/Huawei.png"
+					alt="Huawei"
+				/>
+				<img class="client-image" src="/images/clients/LEGO.png" alt="LEGO" />
+				<img class="client-image" src="/images/clients/Lilly.png" alt="Lilly" />
+				<img
+					class="client-image"
+					src="/images/clients/microsoft.png"
+					alt="Microsoft"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Nestea.png"
+					alt="Nestea"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Netflix.png"
+					alt="Netflix"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Pandora.jpg"
+					alt="Pandora"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Reebok.png"
+					alt="Reebok"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Shiseido.png"
+					alt="Shiseido"
+				/>
+				<img
+					class="client-image"
+					src="/images/clients/Spotify.png"
+					alt="Spotify"
+				/>
+				<img class="client-image" src="/images/clients/Sony.png" alt="Sony" />
 				<!-- Add more logos as needed -->
 			</div>
 		</section>

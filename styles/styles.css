@@ -1,152 +1,207 @@
-h1 {color: rgb(0, 0, 0);
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: xx-large;
-    margin-bottom: 1em;}
-
-h2 {color: rgb(255, 255, 255);
-    font-family: 'Roboto', sans-serif;
-    font-size: x-large;
-    text-align: left;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 0.2em;}
-    
-section {margin-bottom: 7em;}
-
-.highlight {
-    background: #2B3C42 ;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 0.4em;}
-
-article {
-    font-family: 'Roboto', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: larger;
-    text-align: left;
-    padding-top: 0;
-    flex: 1;
-    max-width: 40%;}
-    
-p {font-family: 'Roboto', sans-serif;
-    text-indent: 2em;
-    line-height : 1.5em;
-    margin-top: 0em;}
- 
-.cardImages {flex: 1;
-    max-width: 60%;
-    border-radius: 10px;} 
-
-body {padding: 3em;} 
-
-.flex-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    gap: 3em;
-    padding: 3em;
-    margin-bottom: 3em;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background: #2B3C42;
-    filter: drop-shadow(12px 12px 10px rgb(92, 92, 92));}
-
-/* These two have a different distribution */    
-.gameImage{max-width: 20%;}
-.gameArticle{max-width: 80%;}
-
-.collapsed {
-    height: 15em;
-    overflow: hidden;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.781));
+html {
+	font-family: 'Roboto', sans-serif;
 }
 
-/* CSS selector to identify the tabs */
-.collapsible {
-    cursor: pointer;}
+h1 {
+	text-align: center;
+	font-size: xx-large;
+	margin-bottom: 1em;
+}
 
-.grid-container {
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 33% 33% auto; 
-    padding: 3em;
-    column-gap: 2em;
-    row-gap: 6em;
-    filter: drop-shadow(12px 12px 10px #5C5C5C);}
+h2 {
+	color: rgb(11, 170, 11);
 
-.grid-item {
-    font-family: 'Roboto', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: larger;
-    text-align: left;}
+	font-size: xx-large;
+	font-weight: bolder;
+	text-align: left;
+	margin-top: 0em;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 0.2rem;
+}
 
-.item1 {
-    grid-column-start: 1;
-    grid-column-end: 3;}
+h3 {
+	color: rgb(221, 221, 221);
 
-.item2 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    text-align: right;
-    align-self: center;}
+	font-size: x-large;
+	font-weight: bolder;
+	text-align: left;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 0.2em;
+}
 
-.item3 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    align-self: center;}
+header {
+	border-bottom: 1px solid #ddd; /* A subtle border at the bottom */
+	padding: 10px 0; /* Add some vertical padding */
+}
 
-.item4 {
-    grid-column-start: 2;
-    grid-column-end: 4;}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px; /* Maximum width of the content */
+	margin: 0 auto; /* Centering the nav */
+	padding: 0 20px; /* Padding on the sides */
+}
 
-img {
-    max-width: 100%;
-    height: auto;
-    width: 100%;}
+/* Styles for the navigation links */
+.nav-links a {
+	text-decoration: none; /* Remove underline from links */
+	color: #333; /* Color of the nav links */
+	padding: 0 15px; /* Spacing between nav links */
+	font-weight: bold; /* Make the nav links bold */
+}
 
-/* The hyperlinks were very difficult to see with their original colour*/    
-a { color: #ADD8E6;
-    font-weight: bold;}
-    
+.nav-links a:hover {
+	color: #007bff; /* Color when hovering over links */
+	/* border-bottom: 2px solid #007bff; Underline effect on hover */
+}
 
-.secondColour{
-    background-color: #0e260f;}
+/* Styles for the logo */
+.logo h1 {
+	font-size: 1.5em; /* Adjust the size of the logo text */
+	margin: 0;
+	font-weight: normal; /* Depends on your preference */
+}
 
-.thirdColour{
-    background-color: #426656;}
+.logo a {
+	text-decoration: none; /* Remove underline from the logo link */
+	color: #333; /* Logo text color */
+}
 
-.fourthColour{
-    background-color: #5586a7;}
+/* section {
+	margin-bottom: 7em;
+} */
+#voice-samples {
+	background-image: url('/images/backgrounds/background_bricks.jpg');
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 1rem;
+}
 
-    
-@media all and (pointer:none) , (pointer:coarse) {
-    body {
-        padding: 0.3em;
-    } 
+#voice-samples h2 {
+	color: #ebebeb; /* Set text color to white */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a dark shadow to make the text pop */
+	font-size: 2.5em; /* Increase the size of the heading */
+	padding: 10px; /* Add some padding around the text */
+	display: inline-block; /* Allow the use of padding and background */
+	background: rgba(
+		0,
+		0,
+		0,
+		0.3
+	); /* Semi-transparent black background behind the text */
+	margin: 20px; /* Add some margin around the heading */
+	border-radius: 5px; /* Optional: rounded corners for the background */
+}
 
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.2em;
-        padding: 0.5em;
-        border-radius: 10px;
-    }
+.samplesBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center children horizontally */
+	justify-content: center; /* Center children vertically if there is height to distribute */
+	text-align: center; /* Center text within children */
+	gap: 1rem;
+}
 
-    .grid-container {
-        gap: 0.5em;
-        padding: 0.5em;
-        column-gap: 0.5em;
-        row-gap: 0.5em;
-    }
-   
-    .cardImages {max-width: 100%;} 
+.sample {
+	padding: 15px;
+	border-radius: 8px; /* Rounded corners for the sample container */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+	background: rgba(
+		90,
+		88,
+		88,
+		0.9
+	); /* Light background for the sample container */
+	background: rgba(
+		0,
+		0,
+		0,
+		0.5
+	); /* Semi-transparent black background behind the text */
+	text-align: center;
+	max-width: 350px; /* Set a max-width for the sample container */
+	width: 100%;
+	box-sizing: border-box; /* Include padding in the width calculation */
+}
 
-    article {max-width: 100%;}
+.sample h3 {
+	margin-bottom: 0.5rem;
+	margin-top: 0%;
+}
 
-    h2 {font-size: large;}
+audio {
+	width: 100%; /* Ensure audio controls take up the full width of their container */
+	outline: none; /* Remove outline on focus for a cleaner look */
+}
 
-    p {margin-top: 0em;}           
-} 
+.client-image {
+	height: auto;
+	width: auto;
+}
+
+.client-logos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-image: url('/images/backgrounds/background_happyClients.jpg');
+	background-size: cover;
+	background-position: center;
+	gap: 1rem;
+}
+
+article {
+	font-family: 'Roboto', sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: larger;
+	text-align: left;
+	padding-top: 0;
+	flex: 1;
+	max-width: 40%;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	text-indent: 2em;
+	line-height: 1.5em;
+	margin-top: 0em;
+}
+
+body {
+	margin: 0em;
+}
+
+@media all and (pointer: none), (pointer: coarse) {
+	body {
+		padding: 0.3em;
+	}
+
+	.flex-container {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.2em;
+		padding: 0.5em;
+		border-radius: 10px;
+	}
+
+	.grid-container {
+		gap: 0.5em;
+		padding: 0.5em;
+		column-gap: 0.5em;
+		row-gap: 0.5em;
+	}
+
+	article {
+		max-width: 100%;
+	}
+
+	h2 {
+		font-size: large;
+	}
+
+	p {
+		margin-top: 0em;
+	}
+}
