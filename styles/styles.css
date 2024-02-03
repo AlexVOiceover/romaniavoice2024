@@ -142,7 +142,7 @@ audio {
 	flex-wrap: wrap;
 	padding: 2rem;
 	padding-top: 0;
-	gap: 1rem;
+	gap: 2rem;
 	align-items: center; /* Center children horizontally */
 	justify-content: center; /* Center children vertically if there is height to distribute */
 	text-align: center; /* Center text within children */
