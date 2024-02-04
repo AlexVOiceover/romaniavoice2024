@@ -133,7 +133,7 @@ audio {
 }
 
 #clients {
-	background-image: url('../images/backgrounds/background_happyClients2.webp');
+	background-image: url('../images/backgrounds/background_happyClients.webp');
 	background-size: cover;
 	background-position: center;
 }
@@ -187,7 +187,6 @@ audio {
 }
 
 #studio {
-	background: #ebebeb;
 	background-image: url('../images/backgrounds/background_persiana.jpg');
 	background-size: cover;
 	background-position: center;
@@ -245,6 +244,16 @@ audio {
 	margin-bottom: 0; /* Remove any bottom margin from the image */
 }
 
+#contact {
+	background: #ebebeb;
+	background-image: url('../images/backgrounds/background_contact.webp');
+	background-size: cover;
+	background-position: center;
+}
+
+.form-table {
+}
+
 section {
 	margin-bottom: 0rem;
 	padding-bottom: 5rem;
@@ -282,6 +291,6 @@ img {
 
 @media all and (pointer: none), (pointer: coarse) {
 	nav {
-		visibility: hidden;
+		/* visibility: hidden; */
 	}
 }
