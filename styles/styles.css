@@ -42,7 +42,7 @@ header {
 	display: flex; /* Use flexbox to layout children */
 	flex-direction: column;
 	justify-content: space-between; /* Space out nav and branding */
-	background-image: url('./images/backgrounds/mid04.webp');
+	background-image: url('../images/backgrounds/mid04.webp');
 	background-size: cover;
 	position: relative; /* For positioning the branding content if needed */
 }
@@ -100,7 +100,7 @@ nav {
 }
 
 #samples {
-	background-image: url('./images/backgrounds/background_bricks.jpg');
+	background-image: url('../images/backgrounds/background_bricks.jpg');
 	background-size: cover;
 	background-position: center;
 	padding-bottom: 1rem;
@@ -132,7 +132,7 @@ audio {
 }
 
 #clients {
-	background-image: url('./images/backgrounds/background_happyClients.jpg');
+	background-image: url('../images/backgrounds/background_happyClients.jpg');
 	background-size: cover;
 	background-position: center;
 	padding-bottom: 1rem;
@@ -157,7 +157,7 @@ audio {
 
 #studio {
 	background: #ebebeb;
-	background-image: url('./images/backgrounds/background_persiana.jpg');
+	background-image: url('../images/backgrounds/background_persiana.jpg');
 	background-size: cover;
 	background-position: center;
 	padding-bottom: 1rem;
