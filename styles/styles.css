@@ -1,18 +1,24 @@
+:root {
+	--primary-color: #007bff; /* Define a primary color variable */
+	--background-color: #f0f0f0; /* Define a background color variable */
+	--text-color: #ebebeb; /* Define a text color variable */
+}
+
 html {
 	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-	text-align: center;
+	text-align: right;
 	font-size: xx-large;
-	margin-bottom: 1em;
+	margin: 0rem;
 }
 
 h2 {
 	font-size: xx-large;
 	font-weight: bolder;
 	text-align: left;
-	color: #ebebeb;
+	color: var(--text-color);
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	padding: 10px;
 	display: inline-block;
@@ -22,7 +28,7 @@ h2 {
 }
 
 h3 {
-	color: rgb(221, 221, 221);
+	color: var(--text-color);
 	font-size: x-large;
 	font-weight: bolder;
 	text-align: left;
@@ -33,45 +39,67 @@ h3 {
 }
 
 header {
-	border-bottom: 1px solid #ddd; /* A subtle border at the bottom */
-	padding: 10px 0; /* Add some vertical padding */
+	display: flex; /* Use flexbox to layout children */
+	flex-direction: column;
+	justify-content: space-between; /* Space out nav and branding */
+	background-image: url('/images/backgrounds/mid04.webp');
+	background-size: cover;
+	position: relative; /* For positioning the branding content if needed */
+}
+
+.branding {
+	display: flex;
+	justify-content: space-between; /* Align the face image to the right */
+	/* align-items:flex-end; Center align the face image vertically */
+	width: 100%; /* Take up the remaining space */
+}
+
+.face-image {
+	flex: 2;
+	max-width: 25rem; /* Adjust width as needed */
+	min-width: 10rem;
+	align-self: flex-end;
+	object-fit: contain; /* Preserve aspect ratio without cropping */
+	height: auto; /* Maintain aspect ratio */
 }
 
 nav {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	max-width: 1200px; /* Maximum width of the content */
-	margin: 0 auto; /* Centering the nav */
-	padding: 0 20px; /* Padding on the sides */
+
+	margin: 0; /* Centering the nav */
+	/* padding: 1rem 2rem; 
+	padding-left: 1vw;
+	padding-right: 1.5vw;
+	padding-bottom: 0; */
+
+	padding: 1rem 1.5vw 0 1vw; /* Padding top, right, bottom, left */
 }
 
 /* Styles for the navigation links */
 .nav-links a {
 	text-decoration: none; /* Remove underline from links */
-	color: #333; /* Color of the nav links */
-	padding: 0 15px; /* Spacing between nav links */
+	color: var(--text-color); /* Color of the nav links */
+	padding: 0 0.75rem; /* Spacing between nav links */
 	font-weight: bold; /* Make the nav links bold */
+	font-size: clamp(1rem, 3vw, 2rem);
 }
 
 .nav-links a:hover {
-	color: #007bff; /* Color when hovering over links */
+	color: #c01414; /* Color when hovering over links */
 	/* border-bottom: 2px solid #007bff; Underline effect on hover */
 }
 
 /* Styles for the logo */
-.logo h1 {
-	font-size: 1.5em; /* Adjust the size of the logo text */
-	margin: 0;
-	font-weight: normal; /* Depends on your preference */
-}
-
 .logo a {
+	/* Adjust the size of the logo text */
 	text-decoration: none; /* Remove underline from the logo link */
-	color: #333; /* Logo text color */
+	color: #ececec; /* Logo text color */
+	font-size: clamp(2rem, 6vw, 5rem);
+	padding: 0;
 }
 
-#voice-samples {
+#samples {
 	background-image: url('/images/backgrounds/background_bricks.jpg');
 	background-size: cover;
 	background-position: center;
@@ -155,7 +183,7 @@ audio {
 
 	flex-wrap: wrap;
 	padding: 0;
-	background: rgba(240, 240, 240, 0.7); /* Change as needed */
+	background: rgba(250 250, 250, 0.8); /* Change as needed */
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Optional shadow for depth */
 	width: 80%; /* Responsive image width */
 	min-width: 330px;
@@ -195,13 +223,24 @@ section {
 }
 
 p {
-	font-family: 'Roboto', sans-serif;
 	color: #333;
 	font-size: large;
 	font-weight: bold;
 	margin-top: 0em;
-
 	padding-left: 1rem;
+}
+
+article {
+	flex: 1;
+	padding: 1rem;
+	text-align: left;
+	align-self: center;
+	color: #ebebeb;
+	font-weight: bold;
+	margin-top: 0em;
+	padding-left: 2vw;
+	font-size: clamp(1rem, 3vw, 2rem);
+	line-height: 1.75;
 }
 
 body {
