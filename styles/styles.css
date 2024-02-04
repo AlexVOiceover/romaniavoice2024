@@ -288,7 +288,7 @@ audio {
 	text-align: left;
 	align-self: center;
 	color: var(--text-color);
-	font-weight: bold;
+	font-weight: 400;
 	margin-top: 0em;
 	padding-left: 2vw;
 	padding-right: 2vw;
@@ -358,7 +358,8 @@ article {
 	text-align: left;
 	align-self: center;
 	color: #ebebeb;
-	font-weight: bold;
+	font-weight:300;
+	font-style: italic;
 	margin-top: 0em;
 	padding-left: 3vw;
 	padding-right: 0;
