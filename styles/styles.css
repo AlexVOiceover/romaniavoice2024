@@ -84,7 +84,7 @@ nav {
 	color: #a71414;
 	padding: 0rem; /* Spacing between nav links */
 	font-weight: bold; /* Make the nav links bold */
-	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-size: clamp(1rem, 3vw, 2rem);
 }
 
 .nav-links a:hover {
@@ -247,14 +247,14 @@ audio {
 #contact {
 	background-image: url('../images/backgrounds/background_contact.webp');
 	background-size: cover;
-	background-position: center;   
+	background-position: center;
 }
 
-.formAndText{
+.formAndText {
 	display: flex;
 	flex-direction: row;
 	margin-left: auto; /* Auto margin on left */
-    margin-right: auto; /* Auto margin on right */ 
+	margin-right: auto; /* Auto margin on right */
 	align-items: center; /* Center children horizontally */
 	justify-content: center;
 	flex-wrap: wrap;
@@ -272,14 +272,12 @@ audio {
 	justify-content: center; /* Center children vertically if there is height to distribute */
 	text-align: center; /* Center text within children */
 	gap: 2rem;
-
 }
 
-.form-line{
+.form-line {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-
 }
 
 .formText {
@@ -304,11 +302,10 @@ textarea {
 	max-width: 100%;
 	width: 100%;
 	padding: 0.5rem;
-
 }
 
 textarea {
-	height: 6em; 
+	height: 6em;
 }
 
 section {
