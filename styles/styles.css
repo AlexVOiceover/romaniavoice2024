@@ -73,7 +73,7 @@ nav {
 
 .nav-links {
 	display: flex;
-	gap:1rem;
+	gap: 1rem;
 	flex-wrap: wrap;
 }
 
@@ -81,7 +81,7 @@ nav {
 .nav-links a {
 	text-decoration: none; /* Remove underline from links */
 	color: var(--text-color); /* Color of the nav links */
-	color: #a71414; 
+	color: #a71414;
 	padding: 0rem; /* Spacing between nav links */
 	font-weight: bold; /* Make the nav links bold */
 	font-size: clamp(1.5rem, 3vw, 2rem);
@@ -89,7 +89,6 @@ nav {
 
 .nav-links a:hover {
 	color: #d8d8d8; /* Color when hovering over links */
-	/* border-bottom: 2px solid #007bff; Underline effect on hover */
 }
 
 /* Styles for the logo */
@@ -97,17 +96,15 @@ nav {
 	/* Adjust the size of the logo text */
 	text-decoration: none; /* Remove underline from the logo link */
 	color: #ececec; /* Logo text color */
-	
+
 	font-size: clamp(2rem, 6vw, 5rem);
 	padding: 0;
-
 }
 
 #samples {
 	background-image: url('../images/backgrounds/background_bricks.jpg');
 	background-size: cover;
 	background-position: center;
-	padding-bottom: 1rem;
 }
 
 .samplesBox {
@@ -136,27 +133,29 @@ audio {
 }
 
 #clients {
-	background-image: url('../images/backgrounds/background_happyClients.jpg');
+	background-image: url('../images/backgrounds/background_happyClients2.webp');
 	background-size: cover;
 	background-position: center;
-	padding-bottom: 1rem;
 }
 
 .client-logos {
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding-left: 5vw;
+	padding-right: 5vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: clamp(2rem, 5vw, 5rem);
 	align-items: center; /* Center children horizontally */
 	justify-content: center; /* Center children vertically if there is height to distribute */
 	text-align: center; /* Center text within children */
 }
 
 .client-image {
-	height: 50px;
+	height: clamp(2rem, 5vw, 5rem);
 	width: auto;
+	background: rgba(117, 117, 117, 0.6);
+	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1);
+	padding: 0.5rem;
 }
 
 #studio {
@@ -164,7 +163,6 @@ audio {
 	background-image: url('../images/backgrounds/background_persiana.jpg');
 	background-size: cover;
 	background-position: center;
-	padding-bottom: 1rem;
 }
 
 .studio-table {
@@ -184,13 +182,11 @@ audio {
 	display: flex;
 	flex-direction: row;
 	align-items: center; /* Center items in the flex container */
-
 	flex-wrap: wrap;
 	padding: 0;
 	background: rgba(250 250, 250, 0.8); /* Change as needed */
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Optional shadow for depth */
-	width: 80%; /* Responsive image width */
-	min-width: 330px;
+	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1); /* shadow for depth */
+	width: clamp(12rem, 60vw, 60rem); /* Responsive image width */
 }
 
 .studio-cell h3 {
@@ -216,14 +212,39 @@ audio {
 .studio-cell img {
 	width: 100%; /* Responsive image width */
 	/*max-width: 400px; /* Maximum image width */
-	min-width: 200px;
+	min-width: 12rem;
 	height: auto; /* Maintain aspect ratio */
 	display: block; /* This removes any extra space beneath the image */
 	margin-bottom: 0; /* Remove any bottom margin from the image */
 }
 
+/* CSS for alternating images */
+.image-set-1 {
+	animation: toggleImages 5s infinite alternate; /* Toggle every 5 seconds */
+	opacity: 1; /* Initially set opacity to 0 for the second set of images */
+	visibility: visible;
+}
+
+.image-set-2 {
+	animation: toggleImages 5s infinite alternate; /* Toggle every 5 seconds */
+	opacity: 0; /* Initially set opacity to 0 for the second set of images */
+	visibility: hidden; /* Initially hide the second set of images */
+}
+
+@keyframes toggleImages {
+	0% {
+		opacity: 1; /* Start with full opacity */
+		visibility: visible; /* Show the element */
+	}
+	100% {
+		opacity: 0; /* Fade out at the end */
+		visibility: hidden; /* Hide the element */
+	}
+}
+
 section {
-	margin-bottom: 3rem;
+	margin-bottom: 0rem;
+	padding-bottom: 5rem;
 }
 
 p {
@@ -243,6 +264,7 @@ article {
 	font-weight: bold;
 	margin-top: 0em;
 	padding-left: 3vw;
+	padding-right: 0;
 	font-size: clamp(1rem, 3vw, 2rem);
 	line-height: 1.75;
 }
