@@ -156,6 +156,34 @@ audio {
 	background: rgba(117, 117, 117, 0.6);
 	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1);
 	padding: 0.5rem;
+	animation: waveMotion 7s infinite alternate ease-in-out; /* Apply the wave motion animation */
+}
+
+.delay1 {
+	animation-delay: 10ms;
+}
+.delay2 {
+	animation-delay: 1s;
+}
+.delay3 {
+	animation-delay: 2s;
+}
+.delay4 {
+	animation-delay: 3s;
+}
+
+@keyframes waveMotion {
+	0%,
+	100% {
+		transform: translateX(0); /* Start and end at the original position */
+	}
+	50% {
+		transform: translateX(0.2vw); /* Move right */
+	}
+	25%,
+	75% {
+		transform: translateX(-0.2vw); /* Move left */
+	}
 }
 
 #studio {
@@ -211,35 +239,10 @@ audio {
 
 .studio-cell img {
 	width: 100%; /* Responsive image width */
-	/*max-width: 400px; /* Maximum image width */
 	min-width: 12rem;
 	height: auto; /* Maintain aspect ratio */
 	display: block; /* This removes any extra space beneath the image */
 	margin-bottom: 0; /* Remove any bottom margin from the image */
-}
-
-/* CSS for alternating images */
-.image-set-1 {
-	animation: toggleImages 5s infinite alternate; /* Toggle every 5 seconds */
-	opacity: 1; /* Initially set opacity to 0 for the second set of images */
-	visibility: visible;
-}
-
-.image-set-2 {
-	animation: toggleImages 5s infinite alternate; /* Toggle every 5 seconds */
-	opacity: 0; /* Initially set opacity to 0 for the second set of images */
-	visibility: hidden; /* Initially hide the second set of images */
-}
-
-@keyframes toggleImages {
-	0% {
-		opacity: 1; /* Start with full opacity */
-		visibility: visible; /* Show the element */
-	}
-	100% {
-		opacity: 0; /* Fade out at the end */
-		visibility: hidden; /* Hide the element */
-	}
 }
 
 section {
