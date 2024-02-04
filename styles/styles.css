@@ -4,12 +4,14 @@
 
 html {
 	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
 }
 
 h1 {
 	text-align: right;
-	font-size: xx-large;
+	font-size: large;
 	margin: 0rem;
+	font-family: 'Raleway', sans-serif;
 }
 
 h2 {
@@ -42,6 +44,7 @@ header {
 	justify-content: space-between; /* Space out nav and branding */
 	background-image: url('../images/backgrounds/mid04.webp');
 	background-size: cover;
+	background-position: right;
 	position: relative; /* For positioning the branding content if needed */
 }
 
@@ -66,10 +69,12 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	margin: 0; /* Centering the nav */
+	gap: 1vw;
 	padding: 1rem 1.5vw 0 1vw; /* Padding top, right, bottom, left */
 }
 
 .nav-links {
+	flex:1;
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap;
@@ -79,22 +84,31 @@ nav {
 .nav-links a {
 	text-decoration: none; /* Remove underline from links */
 	color: var(--text-color); /* Color of the nav links */
-	color: #a71414;
 	padding: 0rem; /* Spacing between nav links */
-	font-weight: bold; /* Make the nav links bold */
+	font-weight: 400; /* Make the nav links bold */
 	font-size: clamp(1rem, 3vw, 2rem);
+	text-shadow: 2px 2px 4px #000000;
 }
 
 .nav-links a:hover {
-	color: #d8d8d8; /* Color when hovering over links */
+	color: #a71414; /* Color when hovering over links */
 }
 
+.intro{
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
+	margin: 2vw;
+	min-width: 10rem;
+}
+
+.logo {
+	flex:1.5;
+}
 /* Styles for the logo */
 .logo a {
 	/* Adjust the size of the logo text */
 	text-decoration: none; /* Remove underline from the logo link */
 	color: #ececec; /* Logo text color */
-
 	font-size: clamp(2rem, 6vw, 5rem);
 	padding: 0;
 }
@@ -358,11 +372,8 @@ article {
 	text-align: left;
 	align-self: center;
 	color: #ebebeb;
-	font-weight:300;
+	font-weight: 300;
 	font-style: italic;
-	margin-top: 0em;
-	padding-left: 3vw;
-	padding-right: 0;
 	font-size: clamp(1rem, 3vw, 2rem);
 	line-height: 1.75;
 }
