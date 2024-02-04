@@ -1,6 +1,4 @@
 :root {
-	--primary-color: #007bff; /* Define a primary color variable */
-	--background-color: #f0f0f0; /* Define a background color variable */
 	--text-color: #ebebeb; /* Define a text color variable */
 }
 
@@ -260,7 +258,7 @@ audio {
 	flex-wrap: wrap;
 	padding-left: 2vw;
 	padding-right: 2vw;
-	gap: 2vw;
+	gap: 4vw;
 }
 
 .form-table {
@@ -272,6 +270,7 @@ audio {
 	justify-content: center; /* Center children vertically if there is height to distribute */
 	text-align: center; /* Center text within children */
 	gap: 2rem;
+	min-width: 15rem;
 }
 
 .form-line {
@@ -282,7 +281,20 @@ audio {
 
 .formText {
 	flex: 1;
-	text-shadow: 1px 1px 2px #000000;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
+	min-width: 12rem;
+	padding: 1rem;
+	text-align: left;
+	align-self: center;
+	color: var(--text-color);
+	font-weight: bold;
+	margin-top: 0em;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	font-size: clamp(1rem, 2vw, 2rem);
+	line-height: 1.75;
+	text-indent: 2rem;
 }
 
 label {
@@ -306,6 +318,25 @@ textarea {
 
 textarea {
 	height: 6em;
+}
+
+button[type='submit'] {
+	background-color: var(--text-color);
+	color: #2a2a2a; /* Set the text color to a dark shade for contrast */
+	border: none; /* Remove the default border */
+	padding: 10px 20px; /* Add some padding to increase the size */
+	font-size: 1rem; /* Set the font size */
+	font-weight: bold; /* Make the text bold */
+	border-radius: 5px; /* Round the corners of the button */
+	cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+	transition: background-color 0.3s ease; /* Smooth transition for the background color */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+	text-transform: uppercase; /* Optional: transform text to uppercase */
+	letter-spacing: 1px; /* Optional: increase letter spacing for better readability */
+}
+
+button[type='submit']:hover {
+	background-color: #a51f62; /* Lighten the background color on hover */
 }
 
 section {
