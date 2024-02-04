@@ -281,4 +281,7 @@ img {
 }
 
 @media all and (pointer: none), (pointer: coarse) {
+	nav {
+		visibility: hidden;
+	}
 }
