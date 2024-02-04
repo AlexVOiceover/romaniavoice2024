@@ -238,7 +238,7 @@ article {
 	color: #ebebeb;
 	font-weight: bold;
 	margin-top: 0em;
-	padding-left: 2vw;
+	padding-left: 3vw;
 	font-size: clamp(1rem, 3vw, 2rem);
 	line-height: 1.75;
 }
