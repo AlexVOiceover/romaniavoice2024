@@ -57,7 +57,7 @@ header {
 .face-image {
 	flex: 2;
 	max-width: 25rem; /* Adjust width as needed */
-	min-width: 10rem;
+	min-width: 15rem;
 	align-self: flex-end;
 	object-fit: contain; /* Preserve aspect ratio without cropping */
 	height: auto; /* Maintain aspect ratio */
