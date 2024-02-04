@@ -55,38 +55,40 @@ header {
 }
 
 .face-image {
-	flex: 2;
+	flex: 1;
 	max-width: 25rem; /* Adjust width as needed */
-	min-width: 15rem;
+	min-width: 20rem;
 	align-self: flex-end;
 	object-fit: contain; /* Preserve aspect ratio without cropping */
 	height: auto; /* Maintain aspect ratio */
+	padding-right: 2vw;
 }
 
 nav {
 	display: flex;
 	justify-content: space-between;
-
 	margin: 0; /* Centering the nav */
-	/* padding: 1rem 2rem; 
-	padding-left: 1vw;
-	padding-right: 1.5vw;
-	padding-bottom: 0; */
-
 	padding: 1rem 1.5vw 0 1vw; /* Padding top, right, bottom, left */
+}
+
+.nav-links {
+	display: flex;
+	gap:1rem;
+	flex-wrap: wrap;
 }
 
 /* Styles for the navigation links */
 .nav-links a {
 	text-decoration: none; /* Remove underline from links */
 	color: var(--text-color); /* Color of the nav links */
-	padding: 0 0.75rem; /* Spacing between nav links */
+	color: #a71414; 
+	padding: 0rem; /* Spacing between nav links */
 	font-weight: bold; /* Make the nav links bold */
-	font-size: clamp(1rem, 3vw, 2rem);
+	font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .nav-links a:hover {
-	color: #c01414; /* Color when hovering over links */
+	color: #d8d8d8; /* Color when hovering over links */
 	/* border-bottom: 2px solid #007bff; Underline effect on hover */
 }
 
@@ -95,8 +97,10 @@ nav {
 	/* Adjust the size of the logo text */
 	text-decoration: none; /* Remove underline from the logo link */
 	color: #ececec; /* Logo text color */
+	
 	font-size: clamp(2rem, 6vw, 5rem);
 	padding: 0;
+
 }
 
 #samples {
