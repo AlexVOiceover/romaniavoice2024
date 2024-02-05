@@ -461,6 +461,11 @@ a {
 	font-size: medium;
 }
 
+.grecaptcha-badge { 
+    visibility: hidden; 
+}
+
+
 @media all and (pointer: none), (pointer: coarse) {
 	.nav-links a {
 		font-size: 0.7rem;
