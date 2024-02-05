@@ -1,11 +1,11 @@
 :root {
 	--text-color: #ebebeb; /* Define a text color variable */
+	--red: #a71414;
 }
 
 html {
 	font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
-
 }
 
 h1 {
@@ -47,12 +47,14 @@ header {
 	background-size: cover;
 	background-position: right;
 	position: relative; /* For positioning the branding content if needed */
+	padding: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 0;
 }
 
 .branding {
 	display: flex;
 	justify-content: space-between; /* Align the face image to the right */
-	/* align-items:flex-end; Center align the face image vertically */
 	flex-wrap: wrap-reverse;
 	width: 100%; /* Take up the remaining space */
 }
@@ -60,8 +62,8 @@ header {
 .face-image {
 	flex: 1;
 	max-width: 25rem; /* Adjust width as needed */
-	min-width: 13rem;
-	object-fit:cover; /* Preserve aspect ratio without cropping */
+	min-width: 12.5rem;
+	object-fit: cover; /* Preserve aspect ratio without cropping */
 	height: auto; /* Maintain aspect ratio */
 	padding-right: 2vw;
 }
@@ -71,7 +73,7 @@ nav {
 	justify-content: space-between;
 	margin: 0; /* Centering the nav */
 	gap: 1vw;
-	padding: 1rem 1.5vw 0 1vw; /* Padding top, right, bottom, left */
+	/*padding: 1rem 1.5vw 0 1vw; /* Padding top, right, bottom, left */
 }
 
 .nav-links {
@@ -98,8 +100,8 @@ nav {
 .intro {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
-	margin: 2vw;
-	margin-top: 0;
+	/* margin: 2vw;*/
+	margin-bottom: 1rem;
 	min-width: 10rem;
 }
 
@@ -123,14 +125,17 @@ nav {
 
 .samplesBox {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Creates as many columns as can fit, each at least 200px wide */
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(20rem, 1fr)
+	); /* Creates as many columns as can fit, each at least 200px wide */
 	justify-items: center; /* Center items horizontally */
 	align-items: center; /* Center items vertically */
 	gap: 3rem;
 	padding-left: 5vw;
 	padding-right: 5vw;
 	padding-top: 3vw;
-  }
+}
 
 .sample {
 	padding: 15px;
@@ -141,7 +146,6 @@ nav {
 	max-width: 30rem; /* Set a max-width for the sample container */
 	width: 100%;
 	box-sizing: border-box; /* Include padding in the width calculation */
-
 }
 
 audio {
@@ -266,6 +270,7 @@ audio {
 	background-image: url('../images/backgrounds/background_contact_upDown.jpg');
 	background-size: cover;
 	background-position: center;
+	padding: 0.5rem;
 }
 
 .formAndText {
@@ -396,7 +401,7 @@ footer {
 	padding: 1rem;
 	background-color: #000000;
 }
-footer p{
+footer p {
 	color: var(--text-color);
 	margin: 0;
 	font-weight: 100;
@@ -404,7 +409,13 @@ footer p{
 }
 
 @media all and (pointer: none), (pointer: coarse) {
-	nav {
-		/* visibility: hidden; */
+	.nav-links a {
+		font-size: 0.7rem;
+	}
+	.nav-links {
+		flex: 1;
+		display: flex;
+		gap: 0.8rem;
+		flex-wrap: nowrap;
 	}
 }
