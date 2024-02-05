@@ -42,7 +42,7 @@ header {
 	display: flex; /* Use flexbox to layout children */
 	flex-direction: column;
 	justify-content: space-between; /* Space out nav and branding */
-	background-image: url('../images/backgrounds/mid04.webp');
+	background-image: url('../images/backgrounds/background_header_upDown.jpg');
 	background-size: cover;
 	background-position: right;
 	position: relative; /* For positioning the branding content if needed */
@@ -74,7 +74,7 @@ nav {
 }
 
 .nav-links {
-	flex:1;
+	flex: 1;
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap;
@@ -94,7 +94,7 @@ nav {
 	color: #a71414; /* Color when hovering over links */
 }
 
-.intro{
+.intro {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
 	margin: 2vw;
@@ -102,7 +102,7 @@ nav {
 }
 
 .logo {
-	flex:1.5;
+	flex: 1.5;
 }
 /* Styles for the logo */
 .logo a {
@@ -145,7 +145,7 @@ audio {
 }
 
 #clients {
-	background-image: url('../images/backgrounds/background_happyClients.webp');
+	background-image: url('../images/backgrounds/background_happyClients_upDown.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -187,14 +187,14 @@ audio {
 @keyframes waveMotion {
 	0%,
 	100% {
-		transform: translateX(0); /* Start and end at the original position */
+		transform: translateX(0) scale(1); /* No movement, original scale */
 	}
 	50% {
-		transform: translateX(0.2vw); /* Move right */
+		transform: translateX(0.2vw) scale(1.02); /* Move right and zoom in a little */
 	}
 	25%,
 	75% {
-		transform: translateX(-0.2vw); /* Move left */
+		transform: translateX(-0.2vw) scale(0.98); /* Move left and zoom out a little */
 	}
 }
 
@@ -257,10 +257,13 @@ audio {
 }
 
 #contact {
-	background-image: url('../images/backgrounds/background_contact.webp');
-	background-size: cover;
+	background-image: url('../images/backgrounds/background_contact_upDown.jpg');
+	background-size:cover;
 	background-position: center;
+	
 }
+
+
 
 .formAndText {
 	display: flex;
