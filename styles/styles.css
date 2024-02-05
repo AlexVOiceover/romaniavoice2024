@@ -26,7 +26,6 @@ h2 {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background behind the text */
 	margin: 20px;
-	border-radius: 5px;
 }
 
 h3 {
@@ -49,7 +48,6 @@ header {
 	padding-top: 1rem;
 	padding-bottom: 0;
 	border-bottom: 2rem solid #000000;
-	/*animation: slideBackground 5s linear infinite; /* Adjust time as needed */
 }
 
 .branding {
@@ -80,29 +78,39 @@ nav {
 .nav-links {
 	flex: 1;
 	display: flex;
-	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1vw;
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
+	background: rgba(0, 0, 0, 0.7);
+	width: fit-content;
+	padding-top: 0.75rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 0.75rem;
+	border-radius: 1rem;
+	
 }
 
 /* Styles for the navigation links */
 .nav-links a {
 	text-decoration: none; /* Remove underline from links */
 	color: var(--text-color); /* Color of the nav links */
-	padding: 0rem; /* Spacing between nav links */
 	font-weight: 400; /* Make the nav links bold */
 	font-size: clamp(1rem, 3vw, 2rem);
 	text-shadow: 2px 2px 4px #000000;
+	transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
 }
 
 .nav-links a:hover {
-	color: #a71414; /* Color when hovering over links */
+	color: var(--red); /* Color when hovering over links */
+	transform: scale(1.1); /* Zoom in effect */
 }
 
 .intro {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
-	/* margin: 2vw;*/
 	margin-bottom: 1rem;
 	min-width: 10rem;
 }
@@ -121,9 +129,11 @@ nav {
 }
 
 #samples {
-	background-image: url('../images/backgrounds/tiles4.webp');
+	background-image: url('../images/backgrounds/background_samples.webp');
 	background-position: center;
-	animation: slideBackgroundTopToBottom 30s linear infinite;
+	background-size: contain;
+	background-repeat: repeat-x;
+	animation: slideBackgroundTopToBottom 5s linear infinite;
 }
 
 .samplesBox {
@@ -142,10 +152,9 @@ nav {
 
 .sample {
 	padding: 15px;
-	border-radius: 8px; /* Rounded corners for the sample container */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Subtle shadow for some depth */
-	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background behind the text */
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.8); /* Subtle shadow for some depth */
+	background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background behind the text */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 	text-align: center;
 	max-width: 30rem; /* Set a max-width for the sample container */
 	width: 100%;
@@ -160,15 +169,15 @@ audio {
 #clients {
 	background-image: url('../images/backgrounds/background_happyClients.webp');
 	background-position: center;
-	animation: slideBackground 90s linear infinite; /* Adjust time as needed */
+	animation: slideBackground 70s linear infinite; /* Adjust time as needed */
 }
 
 @keyframes slideBackground {
 	from {
-		background-position: center;
+		background-position: 0 0;
 	}
 	to {
-		background-position: 100% center;
+		background-position: 87.5% 0;
 	}
 }
 
@@ -187,7 +196,7 @@ audio {
 .client-image {
 	height: clamp(2rem, 5vw, 5rem);
 	width: auto;
-	background: rgba(117, 117, 117, 0.6);
+	background: rgba(117, 117, 117, 0.7);
 	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1);
 	padding: 0.5rem;
 	animation: waveMotion 7s infinite alternate ease-in-out; /* Apply the wave motion animation */
@@ -222,19 +231,20 @@ audio {
 
 #studio {
 	background-color: #c0c0c0;
-	background-image: url('../images/backgrounds/tiles2.webp');
-	background-position: center;
-	animation: slideBackgroundTopToBottom 80s linear infinite;
+	background-image: url('../images/backgrounds/background_studio.webp');
+	background-repeat: repeat; /* Make sure the image repeats vertically */
+	/* 
+	animation: slideBackgroundTopToBottom 70s linear infinite; */
 }
-
+/* 
 @keyframes slideBackgroundTopToBottom {
 	from {
-		background-position: top center;
+		background-position: 0 0;
 	}
 	to {
-		background-position: bottom center;
+		background-position: 0 97.5%;
 	}
-}
+} */
 
 .studio-table {
 	display: flex;
@@ -293,7 +303,7 @@ audio {
 	background-image: url('../images/backgrounds/background_contact.webp');
 	padding: 0.5rem;
 	background-position: center;
-	animation: slideBackground 80s linear infinite; /* Adjust time as needed */
+	animation: slideBackground 90s linear infinite; /* Adjust time as needed */
 }
 
 .formAndText {
