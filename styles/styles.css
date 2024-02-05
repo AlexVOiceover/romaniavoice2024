@@ -47,7 +47,7 @@ header {
 	padding: 1rem;
 	padding-top: 1rem;
 	padding-bottom: 0;
-	border-bottom: 2rem solid #000000;
+	/* border-bottom: 2rem solid #000000; */
 }
 
 .branding {
@@ -105,6 +105,7 @@ nav {
 }
 
 .intro {
+	flex: 1;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background behind the text */
 	text-shadow: 3px 3px 5px #000000;
@@ -412,10 +413,9 @@ button[type='submit']:hover {
 	background-color: #a51f62; /* Lighten the background color on hover */
 }
 
-section {
+.bottomPadded {
 	margin-bottom: 0rem;
 	padding-bottom: 5rem;
-	border-bottom: 2rem solid #000000;
 }
 
 p {
@@ -427,19 +427,37 @@ p {
 }
 
 article {
-	flex: 1;
+	/* flex: 1; */
 	padding: 1rem;
 	text-align: left;
 	align-self: center;
 	color: #ebebeb;
 	font-weight: 300;
 	font-style: italic;
-	font-size: clamp(1rem, 3vw, 2rem);
+	font-size: clamp(1rem, 2vw, 2rem);
 	line-height: 1.75;
 }
 
+.extraText{
+	color: #2a2a2a;
+	text-align: left;
+	margin: 0 auto;
+	width: clamp(12rem, 60vw, 40rem);
+	font-size: clamp(1rem, 2vw, 1.75rem);
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-style: italic;
+	text-indent: 2rem;
+	padding-bottom: 3rem;
+}
+
+
 body {
 	margin: 0em;
+}
+
+section {
+	background-color: rgb(255, 249, 242);
 }
 
 img {
@@ -448,7 +466,6 @@ img {
 
 footer {
 	padding: 2rem;
-	padding-top: 0;
 	justify-content: space-evenly;
 	background-color: #000000;
 	display: flex;
