@@ -79,11 +79,10 @@ nav {
 	flex: 1;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 	gap: 1vw;
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
-	background: rgba(0, 0, 0, 0.7);
 	width: fit-content;
 	padding-top: 0.75rem;
 	padding-left: 1rem;
@@ -98,7 +97,7 @@ nav {
 	color: var(--text-color); /* Color of the nav links */
 	font-weight: 400; /* Make the nav links bold */
 	font-size: clamp(1rem, 3vw, 2rem);
-	text-shadow: 2px 2px 4px #000000;
+	text-shadow: 2px 2px 8px #000000;
 	transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
 }
 
@@ -115,8 +114,12 @@ nav {
 }
 
 .logo {
-	flex: 1.5;
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-end; /* Align items to the right */
+    flex: 1.5;
 }
+
 /* Styles for the logo */
 .logo a {
 	/* Adjust the size of the logo text */
@@ -125,6 +128,11 @@ nav {
 	font-size: clamp(2rem, 6vw, 5rem);
 	text-shadow: 3px 3px 6px #000000;
 	padding: 0;
+}
+
+.logo .subLogo {
+	font-size: clamp(1rem, 4vw, 4rem);
+	text-align: right;
 }
 
 #samples {
