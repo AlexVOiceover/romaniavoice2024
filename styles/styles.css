@@ -5,6 +5,7 @@
 html {
 	font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
+
 }
 
 h1 {
@@ -52,15 +53,15 @@ header {
 	display: flex;
 	justify-content: space-between; /* Align the face image to the right */
 	/* align-items:flex-end; Center align the face image vertically */
+	flex-wrap: wrap-reverse;
 	width: 100%; /* Take up the remaining space */
 }
 
 .face-image {
 	flex: 1;
 	max-width: 25rem; /* Adjust width as needed */
-	min-width: 20rem;
-	align-self: flex-end;
-	object-fit: contain; /* Preserve aspect ratio without cropping */
+	min-width: 13rem;
+	object-fit:cover; /* Preserve aspect ratio without cropping */
 	height: auto; /* Maintain aspect ratio */
 	padding-right: 2vw;
 }
@@ -98,6 +99,7 @@ nav {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
 	margin: 2vw;
+	margin-top: 0;
 	min-width: 10rem;
 }
 
@@ -120,23 +122,26 @@ nav {
 }
 
 .samplesBox {
-	display: flex;
-	flex-direction: column;
-	align-items: center; /* Center children horizontally */
-	justify-content: center; /* Center children vertically if there is height to distribute */
-	text-align: center; /* Center text within children */
-	gap: 1rem;
-}
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Creates as many columns as can fit, each at least 200px wide */
+	justify-items: center; /* Center items horizontally */
+	align-items: center; /* Center items vertically */
+	gap: 3rem;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 3vw;
+  }
 
 .sample {
 	padding: 15px;
 	border-radius: 8px; /* Rounded corners for the sample container */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background behind the text */
 	text-align: center;
-	max-width: 350px; /* Set a max-width for the sample container */
+	max-width: 30rem; /* Set a max-width for the sample container */
 	width: 100%;
 	box-sizing: border-box; /* Include padding in the width calculation */
+
 }
 
 audio {
@@ -241,6 +246,7 @@ audio {
 	flex-direction: column;
 	text-align: center;
 	justify-content: space-around;
+	padding: 1rem;
 }
 
 .imageItem {
@@ -384,6 +390,17 @@ body {
 
 img {
 	margin: 0;
+}
+
+footer {
+	padding: 1rem;
+	background-color: #000000;
+}
+footer p{
+	color: var(--text-color);
+	margin: 0;
+	font-weight: 100;
+	font-size: medium;
 }
 
 @media all and (pointer: none), (pointer: coarse) {
