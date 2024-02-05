@@ -72,7 +72,6 @@ nav {
 	justify-content: space-between;
 	margin: 0;
 	gap: 1vw;
-
 }
 
 .nav-links {
@@ -114,11 +113,11 @@ nav {
 }
 
 .logo {
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack children vertically */
-    align-items: flex-end; /* Align items to the right */
-    flex: 1.5;
-	padding-right: 1rem;;
+	display: flex; /* Enable Flexbox */
+	flex-direction: column; /* Stack children vertically */
+	align-items: flex-end; /* Align items to the right */
+	flex: 1.5;
+	padding-right: 1rem;
 }
 
 .logo a {
@@ -142,7 +141,10 @@ nav {
 
 .samplesBox {
 	display: grid;
-	grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr)); /* Creates as many columns as can fit, each at least 200px wide */
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(15rem, 1fr)
+	); /* Creates as many columns as can fit, each at least 200px wide */
 	justify-items: center; /* Center items horizontally */
 	align-items: center; /* Center items vertically */
 	gap: 2rem;
@@ -151,7 +153,6 @@ nav {
 	padding-left: clamp(0.2rem, 6vw, 5rem);
 	padding-right: clamp(0.2rem, 6vw, 5rem);
 	padding-top: 3vw;
-
 }
 
 .sample {
@@ -166,10 +167,10 @@ nav {
 }
 
 .sample h3 {
-    white-space: nowrap; /* Prevents the text from wrapping to a new line */
-    overflow: hidden; /* Hides the overflow text */
-    text-overflow: ellipsis; /* Adds an ellipsis to indicate clipped text */
-    max-width: 100%; /* Ensures the heading does not exceed the container width */
+	white-space: nowrap; /* Prevents the text from wrapping to a new line */
+	overflow: hidden; /* Hides the overflow text */
+	text-overflow: ellipsis; /* Adds an ellipsis to indicate clipped text */
+	max-width: 100%; /* Ensures the heading does not exceed the container width */
 }
 
 audio {
@@ -460,10 +461,9 @@ a {
 	font-size: medium;
 }
 
-.grecaptcha-badge { 
-    visibility: hidden; 
+.grecaptcha-badge {
+	visibility: hidden;
 }
-
 
 @media all and (pointer: none), (pointer: coarse) {
 	.nav-links a {
@@ -471,15 +471,19 @@ a {
 	}
 	.nav-links {
 		flex: 0.1;
-		display: flex; 
+		display: flex;
 		gap: 0.8rem;
 		flex-wrap: wrap;
-		display: none; 
+		display: none;
 	}
 	.logo {
 		white-space: nowrap; /* Prevents the text from wrapping */
 	}
 	.sample h3 {
 		font-size: medium;
+	}
+	footer p,
+	a {
+		font-size: small;
 	}
 }
