@@ -118,6 +118,7 @@ nav {
     flex-direction: column; /* Stack children vertically */
     align-items: flex-end; /* Align items to the right */
     flex: 1.5;
+	padding-right: 1rem;;
 }
 
 /* Styles for the logo */
