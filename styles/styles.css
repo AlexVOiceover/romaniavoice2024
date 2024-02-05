@@ -258,12 +258,9 @@ audio {
 
 #contact {
 	background-image: url('../images/backgrounds/background_contact_upDown.jpg');
-	background-size:cover;
+	background-size: cover;
 	background-position: center;
-	
 }
-
-
 
 .formAndText {
 	display: flex;
@@ -366,7 +363,7 @@ p {
 	font-size: large;
 	font-weight: bold;
 	margin-top: 0em;
-	padding-left: 1rem;
+	padding: 0rem;
 }
 
 article {
