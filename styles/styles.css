@@ -79,7 +79,6 @@ nav {
 	flex: 1;
 	display: flex;
 	justify-content: space-between;
-	/* align-items: center; */
 	gap: 1vw;
 	flex-wrap: wrap;
 	margin-bottom: 1rem;
@@ -108,7 +107,8 @@ nav {
 
 .intro {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
-	background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background behind the text */
+	background: rgba(0, 0, 0, 0.4); /* Semi-transparent black background behind the text */
+	text-shadow: 3px 3px 5px #000000;
 	margin-bottom: 1rem;
 	min-width: 10rem;
 }
@@ -121,7 +121,6 @@ nav {
 	padding-right: 1rem;;
 }
 
-/* Styles for the logo */
 .logo a {
 	/* Adjust the size of the logo text */
 	text-decoration: none; /* Remove underline from the logo link */
