@@ -448,12 +448,11 @@ a {
 @media all and (pointer: none), (pointer: coarse) {
 	.nav-links a {
 		font-size: 0.7rem;
-		flex: 0.3;
 	}
 	.nav-links {
-		flex: 1;
+		flex: 0.2;
 		display: flex;
 		gap: 0.8rem;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
 }
