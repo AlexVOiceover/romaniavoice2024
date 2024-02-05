@@ -23,7 +23,8 @@ h2 {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	padding: 10px;
 	display: inline-block;
-	background: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Subtle shadow for some depth */
+	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background behind the text */
 	margin: 20px;
 	border-radius: 5px;
 }
@@ -43,13 +44,11 @@ header {
 	display: flex; /* Use flexbox to layout children */
 	flex-direction: column;
 	justify-content: space-between; /* Space out nav and branding */
-	background-image: url('../images/backgrounds/background_header_upDown.jpg');
-	background-size: cover;
-	background-position: right;
-	position: relative; /* For positioning the branding content if needed */
+	background-image: url('../images/backgrounds/background_header.webp');
 	padding: 1rem;
 	padding-top: 1rem;
 	padding-bottom: 0;
+	/*animation: slideBackground 5s linear infinite; /* Adjust time as needed */
 }
 
 .branding {
@@ -66,6 +65,7 @@ header {
 	object-fit: cover; /* Preserve aspect ratio without cropping */
 	height: auto; /* Maintain aspect ratio */
 	padding-right: 2vw;
+	filter: drop-shadow(3px -3px 6px rgba(0, 0, 0, 0.8)); /* Example shadow */
 }
 
 nav {
@@ -115,13 +115,14 @@ nav {
 	text-decoration: none; /* Remove underline from the logo link */
 	color: #ececec; /* Logo text color */
 	font-size: clamp(2rem, 6vw, 5rem);
+	text-shadow: 3px 3px 6px #000000;
 	padding: 0;
 }
 
 #samples {
-	background-image: url('../images/backgrounds/background_bricks.jpg');
-	background-size: cover;
+	background-image: url('../images/backgrounds/tiles4.webp');
 	background-position: center;
+	animation: slideBackgroundTopToBottom 30s linear infinite;
 }
 
 .samplesBox {
@@ -133,8 +134,8 @@ nav {
 	justify-items: center; /* Center items horizontally */
 	align-items: center; /* Center items vertically */
 	gap: 3rem;
-	padding-left: 5vw;
-	padding-right: 5vw;
+	padding-left: 10vw;
+	padding-right: 10vw;
 	padding-top: 3vw;
 }
 
@@ -143,6 +144,7 @@ nav {
 	border-radius: 8px; /* Rounded corners for the sample container */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Subtle shadow for some depth */
 	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background behind the text */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	text-align: center;
 	max-width: 30rem; /* Set a max-width for the sample container */
 	width: 100%;
@@ -155,9 +157,18 @@ audio {
 }
 
 #clients {
-	background-image: url('../images/backgrounds/background_happyClients_upDown.jpg');
-	background-size: cover;
+	background-image: url('../images/backgrounds/background_happyClients.webp');
 	background-position: center;
+	animation: slideBackground 90s linear infinite; /* Adjust time as needed */
+}
+
+@keyframes slideBackground {
+	from {
+		background-position: center;
+	}
+	to {
+		background-position: 100% center;
+	}
 }
 
 .client-logos {
@@ -209,9 +220,19 @@ audio {
 }
 
 #studio {
-	background-image: url('../images/backgrounds/background_persiana.jpg');
-	background-size: cover;
+	background-color: #c0c0c0;
+	background-image: url('../images/backgrounds/tiles2.webp');
 	background-position: center;
+	animation: slideBackgroundTopToBottom 80s linear infinite;
+}
+
+@keyframes slideBackgroundTopToBottom {
+	from {
+		background-position: top center;
+	}
+	to {
+		background-position: bottom center;
+	}
 }
 
 .studio-table {
@@ -235,7 +256,7 @@ audio {
 	padding: 0;
 	background: rgba(250 250, 250, 0.8); /* Change as needed */
 	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 1); /* shadow for depth */
-	width: clamp(12rem, 60vw, 60rem); /* Responsive image width */
+	width: clamp(12rem, 60vw, 40rem); /* Responsive image width */
 }
 
 .studio-cell h3 {
@@ -268,10 +289,10 @@ audio {
 }
 
 #contact {
-	background-image: url('../images/backgrounds/background_contact_upDown.jpg');
-	background-size: cover;
-	background-position: center;
+	background-image: url('../images/backgrounds/background_contact.webp');
 	padding: 0.5rem;
+	background-position: center;
+	animation: slideBackground 80s linear infinite; /* Adjust time as needed */
 }
 
 .formAndText {
@@ -325,7 +346,7 @@ audio {
 
 label {
 	font-weight: bold;
-	font-size: xx-large;
+	font-size: x-large;
 	color: var(--text-color);
 	text-shadow: 1px 1px 2px #000000;
 	white-space: nowrap;
@@ -340,6 +361,7 @@ textarea {
 	max-width: 100%;
 	width: 100%;
 	padding: 0.5rem;
+	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.8); /* shadow for depth */
 }
 
 textarea {
@@ -359,6 +381,7 @@ button[type='submit'] {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
 	text-transform: uppercase; /* Optional: transform text to uppercase */
 	letter-spacing: 1px; /* Optional: increase letter spacing for better readability */
+	box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.8);
 }
 
 button[type='submit']:hover {
@@ -404,7 +427,8 @@ footer {
 	background-color: #000000;
 	display: flex;
 }
-footer p, a {
+footer p,
+a {
 	color: var(--text-color);
 	margin: 0;
 	font-weight: 100;
