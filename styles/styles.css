@@ -90,7 +90,6 @@ nav {
 	padding-right: 1rem;
 	padding-bottom: 0.75rem;
 	border-radius: 1rem;
-	
 }
 
 /* Styles for the navigation links */
@@ -130,9 +129,7 @@ nav {
 
 #samples {
 	background-image: url('../images/backgrounds/background_samples.webp');
-	background-position: center;
-	background-size: contain;
-	background-repeat: repeat-x;
+	background-repeat: repeat;
 	animation: slideBackgroundTopToBottom 5s linear infinite;
 }
 
@@ -451,6 +448,7 @@ a {
 @media all and (pointer: none), (pointer: coarse) {
 	.nav-links a {
 		font-size: 0.7rem;
+		flex: 0.3;
 	}
 	.nav-links {
 		flex: 1;
