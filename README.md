@@ -1,5 +1,5 @@
+![image](https://github.com/AlexVOiceover/romaniavoice2024/assets/94972293/4a0bb120-42f3-4d36-b86a-7e67690b56c7)
 
-![soloAdrianaSmaller](https://github.com/AlexVOiceover/romaniavoice2024/assets/94972293/f0bbd875-ea6d-4c4c-9546-71a8ae26a291)
 
 # Adriana Popescu - Romanian Voiceover
 
