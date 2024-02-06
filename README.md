@@ -1,3 +1,6 @@
+
+![soloAdrianaSmaller](https://github.com/AlexVOiceover/romaniavoice2024/assets/94972293/f0bbd875-ea6d-4c4c-9546-71a8ae26a291)
+
 # Adriana Popescu - Romanian Voiceover
 
 Welcome to the repository for the official website of Adriana Popescu, a professional Romanian voice actress based in London. This website is designed to showcase Adriana's unique voice talent and provide a platform for potential clients to listen to voice samples, view a list of happy clients, and contact her for voice-over work.
